@@ -1,5 +1,5 @@
 # IoT-HomeBase
-Home IoT environment
+Voice-controlled Home IoT environment. Includes a Python Flask webserver that can be used to monitor and control all IoT functionality. 
 
 
 ## Dependencies
