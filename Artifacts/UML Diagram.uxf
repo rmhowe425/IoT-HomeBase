@@ -1,21 +1,22 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>Relation</id><coordinates><x>340</x><y>100</y><w>200</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;70</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>30</x><y>20</y><w>630</w><h>300</h></coordinates><panel_attributes>Devices
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>Relation</id><coordinates><x>340</x><y>100</y><w>200</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;70</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>30</x><y>0</y><w>630</w><h>320</h></coordinates><panel_attributes>Devices
 --
 bg=yellow
-fg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>50</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Abstract Class&gt;&gt;
+fg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>30</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Abstract Class&gt;&gt;
 Device
 --
 - Name: String
 - Status: String
+--
++ updateDevices()
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>170</y><w>160</w><h>110</h></coordinates><panel_attributes>&lt;&lt;LightControl&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>170</y><w>170</w><h>110</h></coordinates><panel_attributes>&lt;&lt;LightControl&gt;&gt;
 --
 + duration: datetime
 + lightStatus: Boolean
-+ topic: String
++ topics: dict&lt;role, topic&gt;
 --
 + Toggle()
-+ UpdateDevices()
+
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>770</x><y>50</y><w>260</w><h>160</h></coordinates><panel_attributes>MQTT
 --
@@ -39,7 +40,7 @@ Room
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>30</x><y>350</y><w>540</w><h>330</h></coordinates><panel_attributes>Rooms
 --
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>580</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Bedroom&gt;&gt;
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>580</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Bedroom&gt;&gt;
 --
 location = 'Bedroom'
 --
@@ -69,17 +70,16 @@ RecordVoice()</panel_attributes><additional_attributes></additional_attributes><
 --
 + lastQueryTime: datetime
 + latestResults: dict&lt;String&gt;
-+ topic: String
++ topics: dict&lt;role, topic&gt;
 --
 + QueryWeather()
-+ UpdateDevices()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>120</y><w>80</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>170</y><w>140</w><h>110</h></coordinates><panel_attributes>&lt;&lt;TempControl&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>120</y><w>80</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>170</y><w>170</w><h>90</h></coordinates><panel_attributes>&lt;&lt;TempControl&gt;&gt;
 --
 + tempStatus: int
-+ topic: String
++ topics: dict&lt;role, topic&gt;
 --
-+ UpdateDevices()
++ sampleTemperature()
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>120</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>120</y><w>60</w><h>290</h></coordinates><panel_attributes>lt=&lt;-
 m1=1..n</panel_attributes><additional_attributes>20;10;10;270</additional_attributes></element></diagram>
