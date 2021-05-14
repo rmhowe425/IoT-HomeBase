@@ -11,15 +11,17 @@ class MyTestCase(unittest.TestCase):
     '''
     def setUp(self):
 
-        self.WR = WeatherReport()
+        self.WR = WeatherReport('Room1')
 
     '''
         Tests the functionality of the WeatherReport constructor
     '''
     def test_Constructor(self):
         self.assertIsNotNone(self.WR)
+        self.assertEqual(self.WR.room, 'Room1')
+        self.assertFalse(self.WR.update)
         self.assertEqual(self.WR.lastQueryTime.strftime('%Y-%m-%d %H:%M:%S'), '1970-01-01 00:00:00')
-        self.assertEqual(self.WR.topic, 'WeatherReport')
+        self.assertEqual(self.WR.topics, ['Device/WeatherReport/DailyUpdate'])
         self.assertEqual(self.WR.URL, 'https://api.weather.gov/gridpoints/RAH/68,75/forecast')
 
 
