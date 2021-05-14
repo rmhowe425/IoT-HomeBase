@@ -14,10 +14,11 @@ class MQTTWrapper:
     '''
     def __init__(self, broker):
         self.brokerIP = broker
+        self.topics = []
         self.client = mqtt.Client()
 
     '''
-        Abstract Callback function that is defined in the library.
+        Callback function that is defined in the library.
         function executes when the client receives a CONNACK from broker.
         @param client: client instances in client / broker relationship.
         @param userdata: user defined data that is passed as "userdata" to callbacks.
@@ -31,7 +32,8 @@ class MQTTWrapper:
                  |      5: Connection refused - not authorised
     '''
     def on_connect(self, client, userdata, flags, rc):
-        pass
+        for topic in self.topics:
+            self.client.subscribe(topic)
 
 
     '''
