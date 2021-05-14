@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 from flask import Flask, render_template
 
 app = Flask(__name__)
-host = '192.168.1.13'
+host = '192.168.1.6'
 rooms = {'Office': '', 'Hallway': '', 'Bedroom': '', 'FirstFloor': ''}
 df = pd.DataFrame(rooms.items(), columns = ['Location', 'Status'])
 

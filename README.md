@@ -4,6 +4,7 @@ Voice-controlled Home IoT environment. Includes a Python Flask webserver that ca
 
 ## Dependencies
 
+
 Library | Link
 ------------ | -------------
 Flask | https://pypi.org/project/Flask/
