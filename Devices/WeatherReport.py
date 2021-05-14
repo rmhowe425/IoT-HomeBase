@@ -17,6 +17,7 @@ class WeatherReport(Device):
     def __init__(self, room):
         super().__init__('WeatherReport', 'Started')
         self.room = room
+        self.status = 'Connected'
         self.update = False
         self.SevenDays = dict()
         self.latestResults = dict()
@@ -42,10 +43,9 @@ class WeatherReport(Device):
                 self.latestResults = results.json()['properties']['periods'][0]
                 payload['Weather'] = self.latestResults['detailedForecast']
             except Exception as e:
-                pass
+                self.status = 'Error'
 
         self.publish(self.client, pub_topic, payload)
-
 
 
     '''
@@ -62,7 +62,7 @@ class WeatherReport(Device):
             payload['Weather'] = ''.join([k['name'], ',', k['detailedForecast'], '.', ' ']
                                          for k in self.SevenDays)
         except Exception as e:
-            pass
+            self.status = 'Error'
 
         self.publish(self.client, pub_topic, payload)
 
@@ -84,12 +84,16 @@ class WeatherReport(Device):
 
 
     '''
-        Sends a daily update regarding the 
-        working status of the device. 
+        Sends a daily update regarding the working status 
+        of the device. 
         @param client: Instance of MQTT client.
         @param topic: Topic to publish on. 
     '''
     def UpdateDevices(self, client, topic):
         pub_topic = 'Room/Device/Status/Update'
         payload = {'Room': self.room, 'Device': self.name, 'Status': self.status}
-        self.publish(self.client, pub_topic, payload)
+
+        try:
+            self.publish(self.client, pub_topic, payload)
+        except Exception as e:
+            self.status = 'Error'
