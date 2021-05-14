@@ -31,6 +31,12 @@
             margin-top: 0px;
         }
 
+        .footer {
+            background-image: url(/static/none.png);
+            text-align: center;
+            margin-top: 50px;
+        }
+
         #email {
             width: 300px;
             place-items: center;
@@ -64,10 +70,10 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#jumbotron">Main <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">Github</a>
+              <a class="nav-link" href="https://github.com/rmhowe425/IoT-HomeBase">Github</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#footer">Download The App</a>
@@ -77,7 +83,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    More...
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -87,6 +93,15 @@
                 </div>
             </li>
         </ul>
+        <form class="form-inline pull-xs-right">
+            <input class="form-control" type="email" placeholder="Email">
+              <input class="form-control" type="password" placeholder="Password">
+            <button class="btn btn-success" type="submit">Login</button>
+          </form>
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
 </nav>
 
@@ -154,11 +169,36 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
+             <div class="card">
+                <img class="card-img-top" src="/static/frontdoor.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title"><i class="fa fa-bicycle"></i> Front door</h4>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+             <div class="card">
+                <img class="card-img-top" src="/static/backdoor.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title"><i class="fa fa-bicycle"></i> Back door</h4>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
     </div>
 
-
 </div>
+<div class="parent">
+<div id="footer" >
+
+    <hr class="m-y-2">
+    <p>Download Here</p>
+</div>
+</div>
+</br>
 
 
 </body>
