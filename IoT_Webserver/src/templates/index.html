@@ -6,41 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+
+     .jumbotron {
+
+              background-image: url(house.jpg);
+              text-align: center;
+              margin-top: 50px;
+          }
+
+     #email {
+
+              width: 300px;
+
+          }
+
+
+
+           .card-img-top {
+
+              width: 100%;
+
+          }
+
+
+          body {
+
+              position: relative;
+
+          }
+
+</style>
+
 </head>
 
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    </div>
-  </nav>
+          <nav class="navbar navbar-light bg-faded navbar-fixed-top" id="navbar">
+          <a class="navbar-brand" href="#">IotApp</a>
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Download The App</a>
+            </li>
+          </ul>
+          <!--<form class="form-inline pull-xs-right">
+            <input class="form-control" type="email" placeholder="Email">
+              <input class="form-control" type="password" placeholder="Password">
+            <button class="btn btn-success" type="submit">Login</button>
+          </form>-->
+        </nav>
 
+
+   <div class="jumbotron" id="jumbotron">
+          <h1 class="display-3">Smart House</h1>
+          <p class="lead">Smart house application</p>
+          <hr class="m-y-2">
+          <p>Want to know more? Join our mailing list!</p>
+
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="email">Email address</label>
+            <div class="input-group" >
+              <div class="input-group-addon">@</div>
+              <input type="email" class="form-control" id="email" placeholder="Your email" >
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+        </div>
+
+<div class="container" id="about">
+      <div class="card-deck-wrapper">
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="firstfloor.png" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-anchor"></i> First floor</h4>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-top" src="hallway.png" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-bicycle"></i> Hallway</h4>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+
+    </div>
+
+      <div class="card">
+      <img class="card-img-top" src="office.png" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-bicycle"></i> Office</h4>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+      <div class="card">
+      <img class="card-img-top" src="bedroom.png" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-bicycle"></i> Bedroom</h4>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
 
 
 </body>
