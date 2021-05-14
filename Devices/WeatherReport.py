@@ -31,7 +31,7 @@ class WeatherReport(Device):
     '''
     def QueryDailyWeather(self):
         pub_topic = 'Device/WeatherReport/DailyUpdate'
-        payload = {'Device': 'WeatherReport', 'Weather': ''}
+        payload = {'Device': self.name, 'Weather': ''}
 
         # If last REST API call has been at least a day ago.
         if not self.update:
@@ -55,7 +55,7 @@ class WeatherReport(Device):
     def SevenDayForecast(self):
         results = get(self.URL)
         pub_topic = 'Device/WeatherReport/WeeklyDailyUpdate'
-        payload = {'Device': 'WeatherReport', 'Weather': ''}
+        payload = {'Device': self.name, 'Weather': ''}
 
         try:
             self.SevenDays = [results.json()['properties']['periods'][i] for i in range(0, 6)]
@@ -91,5 +91,5 @@ class WeatherReport(Device):
     '''
     def UpdateDevices(self, client, topic):
         pub_topic = 'Room/Device/Status/Update'
-        payload = {'Room': self.room, 'Device': 'WeatherReport', 'Status': self.status}
+        payload = {'Room': self.room, 'Device': self.name, 'Status': self.status}
         self.publish(self.client, pub_topic, payload)
