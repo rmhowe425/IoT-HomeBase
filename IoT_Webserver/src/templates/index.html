@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>IoT Base</title>
@@ -79,7 +79,7 @@
               <a class="nav-link" href="#footer">Download The App</a>
             </li>
 
-
+<!--
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
@@ -91,9 +91,9 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </li>
+            </li>-->
         </ul>
-        <form class="form-inline pull-xs-right">
+        <!-- <form class="form-inline pull-xs-right">
             <input class="form-control" type="email" placeholder="Email">
               <input class="form-control" type="password" placeholder="Password">
             <button class="btn btn-success" type="submit">Login</button>
@@ -101,7 +101,7 @@
         <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
 </nav>
 
@@ -111,8 +111,9 @@
     <h1 class="display-3">Smart Home</h1>
     <p class="lead">Smart Home Application Dashborad</p>
     <hr class="m-y-2">
-    <p>Want to know more? Join our mailing list!</p>
+     <!--<p>Want to know more? Join our mailing list!</p>
     <div class="parent">
+
         <form class="form-inline">
             <div class="form-group">
                 <label class="sr-only" for="email">Email address</label>
@@ -124,7 +125,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Sign up</button>
         </form>
-    </div>
+    </div>-->
 </div>
 
 <div class="container" id="about">
@@ -134,8 +135,13 @@
                 <img class="card-img-top" src="/static/firstfloor0.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-anchor"></i> First floor</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -144,9 +150,14 @@
                 <img class="card-img-top" src="/static/hallway0.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-bicycle"></i> Hallway</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
+
                 </div>
 
             </div>
@@ -155,8 +166,12 @@
                 <img class="card-img-top" src="/static/office0.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-bicycle"></i> Office</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -164,8 +179,12 @@
                 <img class="card-img-top" src="/static/bedroom7.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-bicycle"></i> Bedroom</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -173,8 +192,12 @@
                 <img class="card-img-top" src="/static/frontdoor.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-bicycle"></i> Front door</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -182,8 +205,12 @@
                 <img class="card-img-top" src="/static/backdoor.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-bicycle"></i> Back door</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                        content.</p>
+                    <p class="card-text"></p>
+                    {% for table in tables %}
+
+      {{ table|safe }}
+       {% endfor %}
+                    </br>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>

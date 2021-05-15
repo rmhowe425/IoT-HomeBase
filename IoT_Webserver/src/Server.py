@@ -4,15 +4,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 host = '192.168.1.6'
-rooms = {'Office': '', 'Hallway': '', 'Bedroom': '', 'FirstFloor': ''}
-df = pd.DataFrame(rooms.items(), columns = ['Location', 'Status'])
+rooms = {'Device 1': 'OFF', 'Device 2': 'OFF', 'Device 3': 'OFF', 'Device 4': 'OFF'}
+df = pd.DataFrame(rooms.items(), columns = ['Device', 'Status'])
 
 '''
     Function for Homepage.
 '''
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',tables = [df.to_html(classes = 'data')], titles = df.columns.values)
 
 
 '''
@@ -57,4 +57,6 @@ def Subscriber():
 
 
 if __name__ == '__main__':
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(debug = True, host = host)
+
